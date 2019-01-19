@@ -1,0 +1,68 @@
+﻿@model Model.ManualMovement.ManualMovement
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Tem certeza de que deseja excluir este registro?</h3>
+<div>
+    <h4>@Resource.Resources.LBL_MANUAL_MOVEMENT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCosifId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductCosif.CodProductCosif)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifieldDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifieldDate)
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="ManualMovementId" />
+        <input type="submit" value="Excluir" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>

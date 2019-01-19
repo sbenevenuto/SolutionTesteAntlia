@@ -1,0 +1,64 @@
+﻿@model Model.ManualMovement.ManualMovement
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>@Resource.Resources.LBL_MANUAL_MOVEMENT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCosif)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductCosif.ProductCosifId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifieldDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifieldDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ManualMovementId">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>
